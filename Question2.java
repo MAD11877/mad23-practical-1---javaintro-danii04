@@ -12,7 +12,7 @@ public class Question2
     
     // calculate BMI
     double bmi = weight / (height * height);
-    System.out.println("Your BMI is: " + bmi)//String.format("%.2f", bmi));
+    System.out.println("Your BMI is: " + bmi);//String.format("%.2f", bmi));
     /**
      * Prompts user for height and weight, calculate and print out the BMI of the user
      * 
