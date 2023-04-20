@@ -15,7 +15,7 @@ public class Question3
     
     int result = num * num;
     
-    System.out.printin(result);
+    System.out.println(result);
     
     
   }
