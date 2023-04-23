@@ -30,13 +30,13 @@ public class Question5
      
     Scanner in = new Scanner(System.in);
     
-    int numIntegers = scanner.nextInt();
+    int numIntegers = Scanner.nextInt();
     
     //read integers from user
     int[] integers = new int[numIntegers];
-    for (i = 0; i < numIntergers; i++)
+    for (int i = 0; i < numIntergers; i++)
     {
-      integers[i] = scanner.nextInt();
+      integers[i] = Scanner.nextInt();
     }
     
     int mode = calculateMode(integers);
