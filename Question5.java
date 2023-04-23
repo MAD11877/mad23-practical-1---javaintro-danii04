@@ -1,4 +1,6 @@
 import java.util.Scanner;
+import java.util.HashMap;
+import java.util.Map;
 
 public class Question5
 {
@@ -28,5 +30,42 @@ public class Question5
      
     Scanner in = new Scanner(System.in);
     
+    int numIntegers = in.nextInt();
+    
+    //read integers from user
+    int[] integers = new int[numIntegers];
+    for (int i = 0; i < numIntegers; i++)
+    {
+      integers[i] = in.nextInt();
+    }
+    
+    int mode = calculateMode(integers);
+    System.out.println(mode);
+  }
+  public static int calculateMode(int[] integers)
+  {
+    Map<Integer, Integer> frequencyMap = new HashMap<>();
+    
+    for (int num : integers)
+    {
+     if (frequencyMap.containsKey(num)){
+       frequencyMap.put(num, frequencyMap.get(num) + 1);
+     }
+      else{
+        frequencyMap.put(num, 1);
+      }
+    }
+    
+    int mode = integers[0];
+    int maxFrequency = 0;
+    for (Map.Entry<Integer, Integer> entry : frequencyMap.entrySet()) {
+            int num = entry.getKey();
+            int frequency = entry.getValue();
+            if (frequency > maxFrequency) {
+                mode = num;
+                maxFrequency = frequency;
+            }
+        }
+    return mode;
   }
 }
