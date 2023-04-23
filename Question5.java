@@ -48,7 +48,7 @@ public class Question5
     
     for (int num : integers)
     {
-     if (frequencyMap.containsKey = (num)){
+     if (frequencyMap.containsKey(num)){
        frequencyMap.put(num, frequencyMap.get(num) + 1);
      }
       else{
