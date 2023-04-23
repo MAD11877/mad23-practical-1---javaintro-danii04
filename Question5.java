@@ -30,13 +30,13 @@ public class Question5
      
     Scanner in = new Scanner(System.in);
     
-    int numIntegers = Scanner.nextInt();
+    int numIntegers = in.nextInt();
     
     //read integers from user
     int[] integers = new int[numIntegers];
-    for (int i = 0; i < numIntergers; i++)
+    for (int i = 0; i < numIntegers; i++)
     {
-      integers[i] = Scanner.nextInt();
+      integers[i] = in.nextInt();
     }
     
     int mode = calculateMode(integers);
@@ -44,7 +44,7 @@ public class Question5
   }
   public static int calculateMode(int[] integers)
   {
-    Map<Integer, integer> frequencyMap = new HashMap<>();
+    Map<Integer, Integer> frequencyMap = new HashMap<>();
     
     for (int num : integers)
     {
